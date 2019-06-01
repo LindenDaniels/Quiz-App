@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <section>
     <head>
     <title>Game of Thrones Quiz App</title>
     <link rel="stylesheet" href="main.css">
     </head>
-    </section>
-    <section>
-    <header>
-        <h2>Game of Thrones Quiz App</h2>
-    </header> 
-    </section>
-    <section>
+     
     <body>
+            <header>
+                    <h2>Game of Thrones Quiz App</h2>
+                </header> 
+        <nav class = "turn-back">
+            <a href="">Turn Back</a> 
+        </nav>    
         <section>
-            <div class = "go-back">
-                <p>Try Again</p>
-            </div>
+            <header>
+                <h2>Your Statistics</h2>
+            </header>
+            <p class = "question-number">Year: 1/10</p>
+            <p class = "user-score">Supporters: 0/10</p>
         </section>
         <section>
-            <form class = "question-asked">
-                <fieldset>
-                <legend>This is where the question will go.</legend>
-            <input type = "radio" name="answer" ><br>
-            Here are the answer choices.
-            <input type = "submit" value = "submit">
+            <header>
+                <h2>Questions</h2>
+            </header>
+            <form class = "question-asked" action="/some-server-endpoint" 
+                  method ="post">
+                <fieldset name = "question-and-answers">
+                <legend class = "question">What do we say to
+                    the God of Death?
+                </legend>
+            <input type ="radio" name="answer" id="right-answer" value="0">
+            <label for="right-answer">Not today.</label>
+            <br>
+            <input type ="radio" name="answer" id="wrong-answer" value="1">
+            <label for="wrong-answer">Today.</label>
+            <br>
+            <input type ="radio" name="answer" id="wrong-answer-two" value="2">
+            <label for="wrong-answer">Tomorrow.</label>
+            <br>
+            <input type ="radio" name="answer" id="wrong-answer-three" value="3">
+            <label for="wrong-answer">Yesterday.</label>
+            <br>
+
+            <button type = "submit" value = "submit">Send a Raven</button>
             </fieldset>
-            </div>
-        </section>
-        <section>
-
-        </section>
-
-        
+            </form>
+        </section>     
     </body>
-    </section>
+    
 </html>
