@@ -1,13 +1,42 @@
 * {
     box-sizing: border-box;
 }
-.go-back {
-    display: inline-block;
+.turn-back {
+    display: block;
+    font-size: 20px;
+ 
+}
+
+.statistics { 
+    position: relative;
+    top: 70px;
+    right: 70px;
+    float: right;
+}
+
+.question-number, .user-score {
+    font-size: 20px;
+}
+
+.questions-answers {
+    padding: 70px;
+    text-align: left;
+    position: relative;
+    left: 500px; 
     
 }
+.main-header {
+    text-align: center;
+}
+
 
 fieldset {
     padding: 0;
     border: 0;
     margin: 0;
+    font-size: 20px;
+  }
+
+  .raven-button {
+      font-size: 20px;
   }
