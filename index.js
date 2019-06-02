@@ -4,7 +4,14 @@ let userScore = 0;
 function handleHomePageReturn() {
     //this function allows the user to click "turn back"
     // to return to the beginning of the quiz
+    $('.turn-back').click(function()
+    {
     console.log('`handleHomePageReturn ran`');
+    let questionNumber = 0;
+    let userScore = 0;
+    $('.questions-and-answers').remove();
+    $('.landing-page').css('display, block');
+    })
 }
 function startQuiz() {
     //this function allows the user to start the quiz
@@ -120,6 +127,8 @@ function startNewQuiz() {
 
 function handleQuiz() {
     startQuiz();
+    handleHomePageReturn();
+
 
 }
 
