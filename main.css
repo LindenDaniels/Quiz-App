@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 .turn-back {
     display: block;
     font-size: 20px;
  
 }
+
+
 
 .statistics { 
     position: relative;

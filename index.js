@@ -1,3 +1,6 @@
+let questionNumber = 0;
+let userScore = 0;
+
 function handleHomePageReturn() {
     //this function allows the user to click "turn back"
     // to return to the beginning of the quiz
@@ -7,6 +10,47 @@ function handleHomePageReturn() {
 function startQuiz() {
     //this function allows the user to start the quiz
     console.log('`startQuiz ran`');
+}
+
+function displayQuiz() {
+    // this function handles displaying the quiz questions
+    if (questionNumber < quiz-store.length) {
+        return `<section class="question-${questionNumber}" id="quiz-section">
+        <h2>${quiz-store[questionNumber].question}</h2>
+        <header>
+            <h2>Questions</h2>
+        </header>
+        <form class = "quiz" action="/some-server-endpoint" 
+              method ="post">
+            <fieldset name = "question-and-answers">
+            <label class="answer-choices">
+        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
+            name="answer"  required>
+            <span>${quiz-store[questionNumber].answers[0]}</span>
+            </label>
+            <label class="answer-choices">
+        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
+            name="answer"  required>
+            <span>${quiz-store[questionNumber].answers[1]}</span>
+            </label>
+            <label class="answer-choices">
+        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
+            name="answer"  required>
+            <span>${quiz-store[questionNumber].answers[2]}</span>
+            </label>
+            <label class="answer-choices">
+        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
+            name="answer"  required>
+            <span>${quiz-store[questionNumber].answers[3]}</span>
+            </label>
+            <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
+            </fieldset>
+            </form> 
+        <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
+        </fieldset>
+        </form>
+    </section>` 
+    }
 }
 
 function nextQuestion() {
