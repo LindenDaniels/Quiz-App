@@ -9,58 +9,70 @@ function handleHomePageReturn() {
 
 function startQuiz() {
     //this function allows the user to start the quiz
-    $('.start-button').on('click', `js-quiz-toggle`,
-    event => {
+    $('.start-button').click(function() {
+    
     console.log('`startQuiz ran`');
-    let quizDisplay = document.getElementById("quiz-section");
-    if (quizDisplay.style.display === "none") {
-        quizDisplay.style.display = "block";
+    let quizDisplay = document.getElementById("press-start");
+    
+    if  (typeof quizDisplay != "null") {
+        $('.questions-and-answers').css('display', 'block');
+        $('.landing-page').remove();
+        displayQuestion();
     } else {
-        quizDisplay.style.display = "none";
-        displayQuiz();
-      }
-    })
+    
+    };
+})
 }
 
-function displayQuiz() {
-    // this function handles displaying the quiz questions
-    if (questionNumber < quiz-store.length) {
-        return `<section class="question-${questionNumber}" id="quiz-section">
-        <h2>${quiz-store[questionNumber].question}</h2>
-        <header>
-            <h2>Questions</h2>
-        </header>
-        <form class = "quiz" action="/some-server-endpoint" 
-              method ="post">
-            <fieldset name = "question-and-answers">
-            <label class="answer-choices">
-        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
-            name="answer"  required>
-            <span>${quiz-store[questionNumber].answers[0]}</span>
-            </label>
-            <label class="answer-choices">
-        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
-            name="answer"  required>
-            <span>${quiz-store[questionNumber].answers[1]}</span>
-            </label>
-            <label class="answer-choices">
-        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
-            name="answer"  required>
-            <span>${quiz-store[questionNumber].answers[2]}</span>
-            </label>
-            <label class="answer-choices">
-        <input type="radio" value="${quiz-store[questionNumber].answers[0]}"
-            name="answer"  required>
-            <span>${quiz-store[questionNumber].answers[3]}</span>
-            </label>
-            <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
-            </fieldset>
-            </form> 
-        <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
-        </fieldset>
-        </form>
-    </section>` 
+    function displayQuestion() {
+        // this function displays the questions and answers
+        console.log('`displayQuestion ran`');
+        $('.questions-and-answers').html(displayQuiz());
+
     }
+
+
+    function displayQuiz() {
+        // this function handles displaying the quiz questions
+        console.log('`displayQuiz ran`');
+        if (questionNumber < quizData.length) {
+            return `<section class="question-${questionNumber}" id="quiz-section">
+            <h2>${quizData[questionNumber].question}</h2>
+            <header>
+                <h2>Questions</h2>
+            </header>
+            <form class = "quiz" action="/some-server-endpoint" 
+                  method ="post">
+                <fieldset name = "question-and-answers">
+                <label class="answer-choices">
+            <input type="radio" value="${quizData[questionNumber].answers[0]}"
+                name="answer"  required>
+                <span>${quizData[questionNumber].answers[0]}</span>
+                </label>
+                <label class="answer-choices">
+            <input type="radio" value="${quizData[questionNumber].answers[1]}"
+                name="answer"  required>
+                <span>${quizData[questionNumber].answers[1]}</span>
+                </label>
+                <label class="answer-choices">
+            <input type="radio" value="${quizData[questionNumber].answers[2]}"
+                name="answer"  required>
+                <span>${quizData[questionNumber].answers[2]}</span>
+                </label>
+                <label class="answer-choices">
+            <input type="radio" value="${quizData[questionNumber].answers[3]}"
+                name="answer"  required>
+                <span>${quizData[questionNumber].answers[3]}</span>
+                </label>
+                <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
+                </fieldset>
+                </form> 
+            
+        </section>` 
+        }
+
+
+
 }
 
 function nextQuestion() {
@@ -122,7 +134,12 @@ function startNewQuiz() {
 
 function handleQuiz() {
     startQuiz();
-    displayQuiz();
+    
+
+    
+    
 
 
 }
+
+$(handleQuiz);

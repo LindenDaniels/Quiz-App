@@ -1,7 +1,7 @@
 const quizData = [
     {
-        Question: 'What was Daenerys\' three dragons\' names?',
-        Answers: [
+        question: 'What was Daenerys\' three dragons\' names?',
+        answers: [
             'Jon, Robb, Bran',
             'Viserys, Khal Drogo, Khaleesi',
             'Drogon, Rhaegal, Viserion',
