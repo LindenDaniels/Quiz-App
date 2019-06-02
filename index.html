@@ -18,31 +18,16 @@
             <p class = "question-number">Year: 1/10</p>
             <p class = "user-score">Supporters: 0/10</p>
         </section>
-        <section class = "questions-answers">
-            <header>
-                <h2>Questions</h2>
-            </header>
-            <form class = "quiz" action="/some-server-endpoint" 
-                  method ="post">
-                <fieldset name = "question-and-answers">
-                <legend class = "question">What do we say to
-                    the God of Test?
-                </legend>
-            <input type ="radio" name="answer" id="right-answer" value="0">
-            <label for="right-answer">Not today.</label>
-            <br>
-            <input type ="radio" name="answer" id="wrong-answer" value="1">
-            <label for="wrong-answer">Today.</label>
-            <br>
-            <input type ="radio" name="answer" id="wrong-answer-two" value="2">
-            <label for="wrong-answer">Tomorrow.</label>
-            <br>
-            <input type ="radio" name="answer" id="wrong-answer-three" value="3">
-            <label for="wrong-answer">Yesterday.</label>
-            <br>
-            <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
-            </fieldset>
-            </form>
-        </section>     
+       <section class="landing-page">
+           <p>Welcome to the World of Westeros. Can you survive and
+               ascend to the Iron Throne? Take this quiz to find out.
+           </p>
+           <button onclick="startQuiz()" type="submit" name="submit" class="start-button js-quiz-toggle">
+               Enter the World of Westeros
+           </button>
+       </section> 
+       <script src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="quiz-store.js"></script>
     </body>   
 </html>

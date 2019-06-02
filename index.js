@@ -9,7 +9,17 @@ function handleHomePageReturn() {
 
 function startQuiz() {
     //this function allows the user to start the quiz
+    $('.start-button').on('click', `js-quiz-toggle`,
+    event => {
     console.log('`startQuiz ran`');
+    let quizDisplay = document.getElementById("quiz-section");
+    if (quizDisplay.style.display === "none") {
+        quizDisplay.style.display = "block";
+    } else {
+        quizDisplay.style.display = "none";
+        displayQuiz();
+      }
+    })
 }
 
 function displayQuiz() {
@@ -108,4 +118,11 @@ function showTotalScore() {
 function startNewQuiz() {
     //this function will allow the user to start a new quiz
     console.log('`startNewQuiz ran`');
+}
+
+function handleQuiz() {
+    startQuiz();
+    displayQuiz();
+
+
 }
