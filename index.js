@@ -6,33 +6,22 @@ function handleHomePageReturn() {
     // to return to the beginning of the quiz
     console.log('`handleHomePageReturn ran`');
 }
-
 function startQuiz() {
     //this function allows the user to start the quiz
     $('.start-button').click(function() {
-    
     console.log('`startQuiz ran`');
-    let quizDisplay = document.getElementById("press-start");
-    
-    if  (typeof quizDisplay != "null") {
         $('.questions-and-answers').css('display', 'block');
         $('.landing-page').remove();
         displayQuestion();
-    } else {
-    
-    };
-})
+    })
 }
-
-    function displayQuestion() {
+function displayQuestion() {
         // this function displays the questions and answers
         console.log('`displayQuestion ran`');
         $('.questions-and-answers').html(displayQuiz());
 
     }
-
-
-    function displayQuiz() {
+function displayQuiz() {
         // this function handles displaying the quiz questions
         console.log('`displayQuiz ran`');
         if (questionNumber < quizData.length) {
@@ -70,9 +59,6 @@ function startQuiz() {
             
         </section>` 
         }
-
-
-
 }
 
 function nextQuestion() {
@@ -134,11 +120,6 @@ function startNewQuiz() {
 
 function handleQuiz() {
     startQuiz();
-    
-
-    
-    
-
 
 }
 
