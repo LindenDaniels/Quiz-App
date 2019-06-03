@@ -1,5 +1,6 @@
 let questionNumber = 0;
 let userScore = 0;
+let displayNumber = 1;
 
 function handleHomePageReturn() {
     //this function allows the user to click "turn back"
@@ -20,7 +21,7 @@ function startQuiz() {
         $('.questions-and-answers').css('display', 'block');
         $('.landing-page').remove();
         displayQuestion();
-        $('.question-number').text(1);
+        
     })
 }
 function displayQuestion() {
@@ -37,7 +38,7 @@ function displayQuiz() {
             <header>
                 <h2>Your Statistics</h2>
             </header>
-            <p class = "year-number">Year: <span class="question-number">0</span>/10</p>
+            <p class = "year-number">Year: ${displayNumber}</span>/10</p>
             <p class = "user-score">Supporters: ${userScore}/10 Houses</p>
         </section>
         <section class="question-${questionNumber}" id="quiz-section">
@@ -82,7 +83,7 @@ function nextQuestion() {
         event.preventDefault();
         questionNumber++;
         displayQuestion();
-        handleQuestionNumberDisplay();
+        //handleQuestionNumberDisplay();
         
     })
 }
@@ -104,18 +105,15 @@ function handleUserAnswer() {
         if (answer === correctAnswer) {
             handleCorrectAnswer();
             handleUserScore();
+            
         } else {
             handleIncorrectAnswer();
         }
+        handleDisplayNumber();
     });
 }
-function handleQuestionNumberDisplay() {
-    let questionNumberDisplay = $('.question-number');
-    let displayNumber = questionNumberDisplay.val();
+function handleDisplayNumber() {
     displayNumber++;
-    $('.question-number').text(displayNumber);
-
-    
 }
 
 

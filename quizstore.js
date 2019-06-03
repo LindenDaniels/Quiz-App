@@ -7,6 +7,7 @@ const quizData = [
             'Drogon, Rhaegal, Viserion',
             'Dracarys, Morghulis, Dohaeris'
         ],
+        displayedQuestionNumber: 1,
         correctAnswer: 'Drogon, Rhaegal, Viserion',
         correctAnswerText: 'Correct! The people are impressed with your knowledge and you gain supporters.',
         incorrectAnswerText: 'Incorrect! Daenery\'s dragon\'s names are Drogon, Rhaegal and Viserion. You were unable to gain supporters.'
