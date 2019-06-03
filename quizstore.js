@@ -7,7 +7,9 @@ const quizData = [
             'Drogon, Rhaegal, Viserion',
             'Dracarys, Morghulis, Dohaeris'
         ],
-        correctAnswer: 'Drogon, Rhaegal, Viserion'
+        correctAnswer: 'Drogon, Rhaegal, Viserion',
+        correctAnswerText: 'Correct! The people are impressed with your knowledge and you gain supporters.',
+        incorrectAnswerText: 'Incorrect! Daenery\'s dragon\'s names are Drogon, Rhaegal and Viserion. You were unable to gain supporters.'
     },
      { 
         question: 'Which Game of Thrones character takes the crown at the end of Season 8?',

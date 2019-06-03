@@ -4,7 +4,7 @@ let userScore = 0;
 function handleHomePageReturn() {
     //this function allows the user to click "turn back"
     // to return to the beginning of the quiz
-    $('.turn-back').click(function()
+    $('.turn-back').on('click', function(event)
     {
     console.log('`handleHomePageReturn ran`');
     let questionNumber = 0;
@@ -15,11 +15,12 @@ function handleHomePageReturn() {
 }
 function startQuiz() {
     //this function allows the user to start the quiz
-    $('.start-button').click(function() {
+    $('.start-button').on('click', function(event) {
     console.log('`startQuiz ran`');
         $('.questions-and-answers').css('display', 'block');
         $('.landing-page').remove();
         displayQuestion();
+        $('.question-number').text(1);
     })
 }
 function displayQuestion() {
@@ -32,7 +33,14 @@ function displayQuiz() {
         // this function handles displaying the quiz questions
         console.log('`displayQuiz ran`');
         if (questionNumber < quizData.length) {
-            return `<section class="question-${questionNumber}" id="quiz-section">
+            return `<section class = "statistics">
+            <header>
+                <h2>Your Statistics</h2>
+            </header>
+            <p class = "year-number">Year: <span class="question-number">0</span>/10</p>
+            <p class = "user-score">Supporters: ${userScore}/10 Houses</p>
+        </section>
+        <section class="question-${questionNumber}" id="quiz-section">
             <h2>${quizData[questionNumber].question}</h2>
             <header>
                 <h2>Questions</h2>
@@ -70,12 +78,20 @@ function displayQuiz() {
 function nextQuestion() {
     //this function will advance the user to the next question
     console.log('`nextQuestion ran`');
+    $('.questions-and-answers').on('click', '.next-question', function(event) {
+        event.preventDefault();
+        questionNumber++;
+        displayQuestion();
+        handleQuestionNumberDisplay();
+        
+    })
 }
 
-function currentQuestion() {
+/*function currentQuestion() {
     //this function will show the user which question they're on
-    console.log('currentQuestion ran`');
-}
+    console.log('`currentQuestion ran`');
+    questionNumber = `${quizData[questionNumber].val}` + 1;
+}*/
 
 function handleUserAnswer() {
     //this function detects if the user answered correctly or incorrectly
@@ -90,19 +106,27 @@ function handleUserAnswer() {
             handleUserScore();
         } else {
             handleIncorrectAnswer();
-
         }
     });
+}
+function handleQuestionNumberDisplay() {
+    let questionNumberDisplay = $('.question-number');
+    let displayNumber = questionNumberDisplay.val();
+    displayNumber++;
+    $('.question-number').text(displayNumber);
+
+    
 }
 
 
 function handleCorrectAnswer() {
     //this function displays text if the user got the answer right
     console.log('`handleCorrectAnswer ran`');
+    let correctAnswerText = `${quizData[questionNumber].correctAnswerText}`;
     $('.questions-and-answers').html(`<section class="right-answer">
-    <p>You got it right!</p></section>`);
-
-    //return ("You got it right!");
+    <p>${correctAnswerText}</p>
+    <button type="submit" class="next-question">Next Question</button>
+    </section>`);
     
 }
 
@@ -120,7 +144,7 @@ function handleUserScore() {
 function displayUserResults() {
     //this function will tell the user if they're right or wrong with their answer
     //and display the correct answer if they're wrong
-    console.log('`handleUserScore ran`');
+    console.log('`displayUserScore ran`');
 }
 
 function displayUserScore() {
@@ -149,6 +173,7 @@ function handleQuiz() {
     startQuiz();
     handleHomePageReturn();
     handleUserAnswer();
+    nextQuestion();
     
 
 
