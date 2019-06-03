@@ -120,9 +120,9 @@ function handleDisplayNumber() {
 function handleCorrectAnswer() {
     //this function displays text if the user got the answer right
     console.log('`handleCorrectAnswer ran`');
-    let correctAnswerText = `${quizData[questionNumber].correctAnswerText}`;
+    let house = `${quizData[questionNumber].house}`;
     $('.questions-and-answers').html(`<section class="right-answer">
-    <p>${correctAnswerText}</p>
+    <p>Correct! The people are impressed with your knowledge and you gain the support of ${house} sympathizers.</p>
     <button type="submit" class="next-question">Next Question</button>
     </section>`);
     
@@ -131,6 +131,13 @@ function handleCorrectAnswer() {
 function handleIncorrectAnswer() {
     //this function displays text if the user got the answer wrong
     console.log('`handleIncorrectAnswer ran`');
+    let correctAnswer = `${quizData[questionNumber].correctAnswer}`;
+    let house = `${quizData[questionNumber].house}`;
+    $('.questions-and-answers').html(`<section class="wrong-answer">
+    <p>Incorrect! The correct answer is ${correctAnswer}. You were unable to gain the support of ${house} sympathizers.</p>
+    <button type="submit" class="next-question">Next Question</button>
+    </section>`);
+   
 }
 function handleUserScore() {
     

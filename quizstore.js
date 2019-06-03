@@ -1,16 +1,16 @@
 const quizData = [
     {
-        question: 'What was Daenerys\' three dragons\' names?',
+        question: 'What were Daenerys\' three dragons\' names?',
         answers: [
-            'Jon, Robb, Bran',
-            'Viserys, Khal Drogo, Khaleesi',
-            'Drogon, Rhaegal, Viserion',
-            'Dracarys, Morghulis, Dohaeris'
+            'Jon, Robb, and Bran',
+            'Viserys, Khal Drogo, and Khaleesi',
+            'Drogon, Rhaegal, and Viserion',
+            'Dracarys, Morghulis, and Dohaeris'
         ],
         displayedQuestionNumber: 1,
-        correctAnswer: 'Drogon, Rhaegal, Viserion',
-        correctAnswerText: 'Correct! The people are impressed with your knowledge and you gain supporters.',
-        incorrectAnswerText: 'Incorrect! Daenery\'s dragon\'s names are Drogon, Rhaegal and Viserion. You were unable to gain supporters.'
+        correctAnswer: 'Drogon, Rhaegal, and Viserion',
+        house: 'Targaryen',
+        
     },
      { 
         question: 'Which Game of Thrones character takes the crown at the end of Season 8?',
@@ -20,10 +20,11 @@ const quizData = [
             'Sansa Stark',
             'Bran Stark'
         ],
-        correctAnswer: 'Bran Stark'
+        correctAnswer: 'Bran Stark',
+        house: 'Stark'
     },
     {   
-        question: 'Who was blamed for Joffrey’s death at The Purple Wedding?',
+        question: 'Who was blamed for Joffrey\'s death at The Purple Wedding?',
         answers: [
             'Tyrion Lannister',
             'Sansa Stark',
@@ -31,17 +32,19 @@ const quizData = [
             'Olenna Tyrell'
 
         ],
-        correctAnswer: 'Olenna Tyrell'
+        correctAnswer: 'Olenna Tyrell',
+        house: 'Tyrell'
     },
     {
-        question: 'What book series is the TV show Game of Thrones is based on?',
+        question: 'Who frees Tyrion and saves him from execution for the murder of Joffrey?',
         answers: [
-            'A Song of Ice and Fire',
-            'The Hobbit',
-            'Harry Potter',
-            'The Lord of the Rings'
+            'Cersei Lannister',
+            'Tywin Lannister',
+            'Jaime Lannister',
+            'Sansa Stark'
         ],
-        correctAnswer: 'A Song of Ice and Fire'
+        correctAnswer: 'Jaime Lannister',
+        house: 'Lannister'
     },
     {  question: 'What do we say to the God of Death?',
        answers: [
@@ -50,7 +53,8 @@ const quizData = [
            'Tomorrow.',
            'Yesterday.'
        ],
-       correctAnswer: 'Not today.'
+       correctAnswer: 'Not today.',
+       house: 'Braavosi'
     },
     {
         question: 'Who was responsible for the death of Jon Arryn?',
@@ -60,27 +64,30 @@ const quizData = [
             'Lysa Arryn',
             'Eddard Stark'
         ],
-        correctAnswer: 'Peter Baelish'
+        correctAnswer: 'Peter Baelish',
+        house: 'Baelish'
     },
     {
-        question: 'What was Arya’s sword’s name?',
+        question: 'What was Arya\'s sword\'s name?',
         answers: [
             'Littlefinger',
             'Crochet',
             'Pointy end',
             'Needle'
         ],
-        correctAnswer: 'Needle'
+        correctAnswer: 'Needle',
+        house: 'Stark'
     },
     {
-        question: 'What happened to Arya’s direwolf Nymeria?',
+        question: 'What happened to Arya\'s direwolf Nymeria?',
         answers: [
             'She went to go live in the wild.',
             'She was murdered.',
             'She went to live north of the Wall.',
             'She stayed in Winterfell.'
         ],
-        correctAnswer: 'She went to go live in the wild.'
+        correctAnswer: 'She went to go live in the wild.',
+        house: 'Stark'
     },
     {
         question: 'Where was Margaery Tyrell from?',
@@ -90,7 +97,8 @@ const quizData = [
             'Highgarden',
             'Casterly Rock'
         ],
-        correctAnswer: 'Highgarden'
+        correctAnswer: 'Highgarden',
+        house: 'Tyrell'
     },
     {
         question: 'What was the symbol of House Tyrell?',
@@ -100,7 +108,8 @@ const quizData = [
             'A sunflower.',
             'A daisy.'
         ],
-        correctAnswer: 'A rose.'
+        correctAnswer: 'A rose.',
+        house: 'Tyrell'
 
     }
         
