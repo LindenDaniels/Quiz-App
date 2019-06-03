@@ -37,8 +37,7 @@ function displayQuiz() {
             <header>
                 <h2>Questions</h2>
             </header>
-            <form class = "quiz" action="/some-server-endpoint" 
-                  method ="post">
+            <form>
                 <fieldset name = "question-and-answers">
                 <label class="answer-choices">
             <input type="radio" value="${quizData[questionNumber].answers[0]}"
@@ -60,11 +59,11 @@ function displayQuiz() {
                 name="answer"  required>
                 <span>${quizData[questionNumber].answers[3]}</span>
                 </label>
-                <button type = "submit" value = "submit" class="raven-button">Send a Raven</button>
+                <button type="submit" class="raven-button">Send a Raven</button>
                 </fieldset>
                 </form> 
             
-        </section>` 
+        </section>`
         }
 }
 
@@ -81,20 +80,40 @@ function currentQuestion() {
 function handleUserAnswer() {
     //this function detects if the user answered correctly or incorrectly
     console.log('`handleUserAnswer ran`');
+    $('form').on('submit', function(event) {
+        event.preventDefault();
+        let userChoice = $('input:checked');
+        let answer = userChoice.val();
+        let correctAnswer = `${quizData[questionNumber].correctAnswer}`;
+        if (answer === correctAnswer) {
+            handleCorrectAnswer();
+            handleUserScore();
+        } else {
+            handleIncorrectAnswer();
+
+        }
+    });
 }
 
-function correctAnswer() {
+
+function handleCorrectAnswer() {
     //this function displays text if the user got the answer right
-    console.log('`correctAnswer ran`');
+    console.log('`handleCorrectAnswer ran`');
+    $('.questions-and-answers').html(`<section class="right-answer">
+    <p>You got it right!</p></section>`);
+
+    //return ("You got it right!");
+    
 }
 
-function incorrectAnswer() {
+function handleIncorrectAnswer() {
     //this function displays text if the user got the answer wrong
-    console.log('`incorrectAnswer ran`');
+    console.log('`handleIncorrectAnswer ran`');
 }
 function handleUserScore() {
-    //this function will advance the user's score
+    
     console.log('`handleUserScore ran`');
+    userScore++;
 
 }
 
@@ -107,6 +126,7 @@ function displayUserResults() {
 function displayUserScore() {
     //this function displays the user's score
     console.log('`displayUserScore ran`');
+    //return userScore;
 }
 
 function handlePictureDisplay() {
@@ -128,6 +148,8 @@ function startNewQuiz() {
 function handleQuiz() {
     startQuiz();
     handleHomePageReturn();
+    handleUserAnswer();
+    
 
 
 }
