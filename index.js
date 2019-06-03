@@ -80,7 +80,7 @@ function currentQuestion() {
 function handleUserAnswer() {
     //this function detects if the user answered correctly or incorrectly
     console.log('`handleUserAnswer ran`');
-    $('form').on('submit', function(event) {
+    $('.questions-and-answers').on('click', '.raven-button', function(event) {
         event.preventDefault();
         let userChoice = $('input:checked');
         let answer = userChoice.val();
