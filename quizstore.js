@@ -7,7 +7,6 @@ const quizData = [
             'Drogon, Rhaegal, and Viserion',
             'Dracarys, Morghulis, and Dohaeris'
         ],
-        displayedQuestionNumber: 1,
         correctAnswer: 'Drogon, Rhaegal, and Viserion',
         house: 'Targaryen',
         

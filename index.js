@@ -12,7 +12,7 @@ function handleHomePageReturn() {
     let userScore = 0;
     $('.questions-and-answers').remove();
     $('.landing-page').css('display, block');
-    })
+    });
 }
 function startQuiz() {
     //this function allows the user to start the quiz
@@ -22,7 +22,7 @@ function startQuiz() {
         $('.landing-page').remove();
         displayQuestion();
         
-    })
+    });
 }
 function displayQuestion() {
         // this function displays the questions and answers
@@ -50,29 +50,29 @@ function displayQuiz() {
                 <fieldset name = "question-and-answers">
                 <label class="answer-choices">
             <input type="radio" value="${quizData[questionNumber].answers[0]}"
-                name="answer"  required>
+                name="answer" required>
                 <span>${quizData[questionNumber].answers[0]}</span>
                 </label>
                 <label class="answer-choices">
             <input type="radio" value="${quizData[questionNumber].answers[1]}"
-                name="answer"  required>
+                name="answer" required>
                 <span>${quizData[questionNumber].answers[1]}</span>
                 </label>
                 <label class="answer-choices">
             <input type="radio" value="${quizData[questionNumber].answers[2]}"
-                name="answer"  required>
+                name="answer" required>
                 <span>${quizData[questionNumber].answers[2]}</span>
                 </label>
                 <label class="answer-choices">
             <input type="radio" value="${quizData[questionNumber].answers[3]}"
-                name="answer"  required>
+                name="answer" required>
                 <span>${quizData[questionNumber].answers[3]}</span>
                 </label>
                 <button type="submit" class="raven-button">Send a Raven</button>
                 </fieldset>
                 </form> 
             
-        </section>`
+        </section>`;
         } else {
             handleUserResults();
             startNewQuiz();
@@ -150,12 +150,13 @@ function handleIncorrectAnswer() {
 }
 
 function handleUserResults() {
-    console.log('`handleUserResults ran`')
+    console.log('`handleUserResults ran`');
     if (userScore >= 8) {
         $('.questions-and-answers').html(`<section class="winning-score">
         <header>
         <h2>Protector of the Realm</h2>
         </header>
+        <p>You won the support of ${userScore}/10 houses.</p>
         <p>Congratulations! The people are impressed with your knowledge of the history of the realm and their heroes.
         Your Supporting Houses help you take the Iron Throne and install yourself as Protector of the Realm. Only one question
         remains... Do you want it?</p>
@@ -168,6 +169,7 @@ function handleUserResults() {
         <header>
         <h2>Master of Whisperers</h2>
         </header>
+        <p>You won the support of ${userScore}/10 houses.</p>
         <p>You did not gain enough support to take the Iron Throne, but you impressed enough Houses to help cover up your
         scheming ways. You continue to work in the shadows and gain knowledge about the happenings in the realm,
         while your true motivations and loyalty remain unknown.
@@ -175,8 +177,9 @@ function handleUserResults() {
     } else {
         $('.questions-and-answers').html(`<section class="losing-score">
         <header>
-        <h2>Valar Morghulis/h2>
+        <h2>Valar Morghulis</h2>
         </header>
+        <p>You won the support of ${userScore}/10 houses.</p>
         <p>You did not survive the world of Westeros. The Protector of the Realm uncovers your scheming for the throne, and you
         are sentenced to death. Better luck next time.</p>
         <button type="submit" class="try-again">Try Again</button></section>`);
