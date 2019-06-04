@@ -32,8 +32,8 @@ const quizData = [
             'Olenna Tyrell'
 
         ],
-        correctAnswer: 'Olenna Tyrell',
-        house: 'Tyrell'
+        correctAnswer: 'Tyrion Lannister',
+        house: 'Lannister'
     },
     {
         question: 'Who frees Tyrion and saves him from execution for the murder of Joffrey?',
@@ -48,12 +48,12 @@ const quizData = [
     },
     {  question: 'What do we say to the God of Death?',
        answers: [
-           'Not today.',
-           'Today.',
-           'Tomorrow.',
-           'Yesterday.'
+           'Not Today',
+           'Today',
+           'Tomorrow',
+           'Yesterday'
        ],
-       correctAnswer: 'Not today.',
+       correctAnswer: 'Not Today',
        house: 'Braavosi'
     },
     {
@@ -81,12 +81,12 @@ const quizData = [
     {
         question: 'What happened to Arya\'s direwolf Nymeria?',
         answers: [
-            'She went to go live in the wild.',
-            'She was murdered.',
-            'She went to live north of the Wall.',
-            'She stayed in Winterfell.'
+            'She went to go live in the wild',
+            'She was murdered',
+            'She went to live north of the Wall',
+            'She stayed in Winterfell'
         ],
-        correctAnswer: 'She went to go live in the wild.',
+        correctAnswer: 'She went to go live in the wild',
         house: 'Stark'
     },
     {
@@ -103,12 +103,12 @@ const quizData = [
     {
         question: 'What was the symbol of House Tyrell?',
         answers: [
-            'A rose.',
-            'A daffodil.',
-            'A sunflower.',
-            'A daisy.'
+            'A rose',
+            'A daffodil',
+            'A sunflower',
+            'A daisy'
         ],
-        correctAnswer: 'A rose.',
+        correctAnswer: 'A rose',
         house: 'Tyrell'
 
     }

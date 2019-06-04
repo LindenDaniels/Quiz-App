@@ -73,6 +73,10 @@ function displayQuiz() {
                 </form> 
             
         </section>`
+        } else {
+            handleUserResults();
+            startNewQuiz();
+
         }
 }
 
@@ -81,12 +85,15 @@ function nextQuestion() {
     console.log('`nextQuestion ran`');
     $('.questions-and-answers').on('click', '.next-question', function(event) {
         event.preventDefault();
+        //if (questionNumber < 10) {
         questionNumber++;
         displayQuestion();
-        //handleQuestionNumberDisplay();
-        
-    })
+    });// else {
+        //handleUserResults();
+    //}
+  //});
 }
+
 
 /*function currentQuestion() {
     //this function will show the user which question they're on
@@ -139,6 +146,40 @@ function handleIncorrectAnswer() {
     </section>`);
    
 }
+
+function handleUserResults() {
+    console.log('`handleUserResults ran`')
+    if (userScore >= 8) {
+        $('.questions-and-answers').html(`<section class="winning-score">
+        <header>
+        <h2>Protector of the Realm</h2>
+        </header>
+        <p>Congratulations! The people are impressed with your knowledge of the history of the realm and their heroes.
+        Your Supporting Houses help you take the Iron Throne and install yourself as Protector of the Realm. Only one question
+        remains... Do you want it?</p>
+        <button type="sumbit" class="want-it">I want it</button><button type="submit" class="dont-want-it">I don't want it</button>
+        </section>`);
+    
+    }
+    else if (userScore < 8 && userScore >= 5) {
+        $('.questions-and-answers').html(`<section class="master-whispers">
+        <header>
+        <h2>Master of Whisperers</h2>
+        </header>
+        <p>You did not gain enough support to take the Iron Throne, but you impressed enough Houses to help cover up your
+        scheming ways. You continue to work in the shadows and gain knowledge about the happenings in the realm,
+        while your true motivations and loyalty remain unknown.
+        <button type="submit" class="try-again">Try Again</button><section>`);
+    } else {
+        $('.questions-and-answers').html(`<section class="losing-score">
+        <header>
+        <h2>Death</h2>
+        </header>
+        <p>You did not survive the world of Westeros. The Protector of the Realm uncovers your scheming for the throne, and you
+        are sentenced to death. Better luck next time.</p>
+        <button type="submit" class="try-again">Try Again</button></section>`);
+    }
+}
 function handleUserScore() {
     
     console.log('`handleUserScore ran`');
@@ -172,7 +213,18 @@ function showTotalScore() {
 function startNewQuiz() {
     //this function will allow the user to start a new quiz
     console.log('`startNewQuiz ran`');
+    $('.questions-and-answers').on('click', '.try-again', function(event) {
+        /*event.preventDefault();
+        let questionNumber = 0;
+        let userScore = 0;
+        $('.questions-and-answers').remove();
+        $('.landing-page').css('display, block');
+        })*/
+        location.reload();
+    
+    });
 }
+
 
 function handleQuiz() {
     startQuiz();
