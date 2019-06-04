@@ -50,7 +50,7 @@ function displayQuiz() {
                 <fieldset name = "question-and-answers">
                 <label class="answer-choices">
             <input type="radio" value="${quizData[questionNumber].answers[0]}"
-                name="answer" required>
+                name="answer" required />
                 <span>${quizData[questionNumber].answers[0]}</span>
                 </label>
                 <label class="answer-choices">
@@ -106,7 +106,7 @@ function nextQuestion() {
 function handleUserAnswer() {
     //this function detects if the user answered correctly or incorrectly
     console.log('`handleUserAnswer ran`');
-    $('.questions-and-answers').on('click', '.raven-button', function(event) {
+    $('.questions-and-answers').on('submit', 'form', function(event) {
         event.preventDefault();
         let userChoice = $('input:checked');
         let answer = userChoice.val();
