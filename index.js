@@ -76,6 +76,8 @@ function displayQuiz() {
         } else {
             handleUserResults();
             startNewQuiz();
+            wantIt();
+            dontWantIt();
 
         }
 }
@@ -173,7 +175,7 @@ function handleUserResults() {
     } else {
         $('.questions-and-answers').html(`<section class="losing-score">
         <header>
-        <h2>Death</h2>
+        <h2>Valar Morghulis/h2>
         </header>
         <p>You did not survive the world of Westeros. The Protector of the Realm uncovers your scheming for the throne, and you
         are sentenced to death. Better luck next time.</p>
@@ -186,6 +188,36 @@ function handleUserScore() {
     userScore++;
 
 }
+
+function wantIt() {
+    console.log('`wantIt ran`');
+    $('.questions-and-answers').on('click', '.want-it', function(event) {
+        event.preventDefault();
+
+    $('.questions-and-answers').html(`<section class="want-it">
+        <header>
+        <h2>Protector of the Realm</h2>
+        </header>
+        <p>Congratulations! You have chosen to sit on the Iron Throne and rule over the people of Westeros.
+        Long may you reign!</p>
+        <button type="submit" class="try-again">Play Again</button></section>`);
+    });
+
+}
+
+function dontWantIt() {
+    console.log('`dontWantIt ran`');
+    $('.questions-and-answers').on('click', '.dont-want-it', function(event) {
+        event.preventDefault();
+    $('.questions-and-answers').html(`<section class="dont-want-it">
+        
+        <p>You have chosen to abdicate the throne and live out your days in a different life of your choosing. Your supporters
+        work to make sure you remain safe and free from the political reach of the realm.</p>
+        <button type="submit" class="try-again">Play Again</button></section>`);
+});
+
+}
+
 
 function displayUserResults() {
     //this function will tell the user if they're right or wrong with their answer
@@ -213,7 +245,7 @@ function showTotalScore() {
 function startNewQuiz() {
     //this function will allow the user to start a new quiz
     console.log('`startNewQuiz ran`');
-    $('.questions-and-answers').on('click', '.try-again', function(event) {
+    $('.questions-and-answers').on('click', '.try-again', '.play-again', function(event) {
         /*event.preventDefault();
         let questionNumber = 0;
         let userScore = 0;
