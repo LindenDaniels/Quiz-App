@@ -1,10 +1,19 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    width: 500px;
+    background-image: url("https://i.ibb.co/6XxzN8Z/background-2659761.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: white;
+    
+}
 .turn-back {
     display: block;
     font-size: 20px;
+    color: white;
  
 }
 
