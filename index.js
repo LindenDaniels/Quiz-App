@@ -1,7 +1,10 @@
 let questionNumber = 0;
 let userScore = 0;
 let displayNumber = 1;
-
+function showTurnBack() {
+    console.log('`showTurnBack ran`');
+    $('.turn-back').html(`<a href="">Turn Back</a>`);
+}
 function handleHomePageReturn() {
     //this function allows the user to click "turn back"
     // to return to the beginning of the quiz
@@ -19,7 +22,9 @@ function startQuiz() {
     $('.start-button').on('click', function(event) {
     console.log('`startQuiz ran`');
         $('.questions-and-answers').css('display', 'block');
+        //$('.turn-back').css('display', 'block');
         $('.landing-page').remove();
+        showTurnBack();
         displayQuestion();
         
     });

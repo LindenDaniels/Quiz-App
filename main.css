@@ -1,21 +1,49 @@
 * {
     box-sizing: border-box;
 }
+html {
+    
+
+    
+    height: 100%;
+    
+    
+}
+
+.landing-page p {
+    line-height: 1.6;
+    font-size: 2.5em;
+
+    
+}
 body {
-    width: 500px;
-    background-image: url("https://i.ibb.co/6XxzN8Z/background-2659761.jpg");
+    background: url("https://i.ibb.co/gTCR4Fn/texture-990104-1920.jpg");
+    
+
+    
+    background-size: cover;
+    height: 100%;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    padding-top: 400px;
+    width: 500px;
+    margin-left: auto;
+  margin-right: auto;
+    
     color: white;
     
 }
-.turn-back {
+.start-button {
     display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*.turn-back {
+    display: none;
     font-size: 20px;
     color: white;
  
-}
+}*/
 
 
 
