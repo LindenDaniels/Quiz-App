@@ -3,7 +3,7 @@ let userScore = 0;
 let displayNumber = 1;
 function showTurnBack() {
     console.log('`showTurnBack ran`');
-    $('.turn-back').html(`<a href="#">Turn Back</a>`);
+    $('.turn-back').html(`<a href="">Turn Back</a>`);
 }
 function handleHomePageReturn() {
     //this function allows the user to click "turn back"
@@ -189,7 +189,7 @@ function wantIt() {
         <header>
         <h2 class="quiz-header">Protector of the Realm</h2>
         </header>
-        <a href="https://ibb.co/3mfPYG3"><img src="https://i.ibb.co/pjWkrG7/ironthrone.jpg" class="iron-throne" alt="ironthrone" border="0"></a><br />
+        <a href="https://ibb.co/3mfPYG3"><img src="https://i.ibb.co/pjWkrG7/ironthrone.jpg" class="iron-throne" alt="The Iron Throne" border="0"></a><br />
         <p class="answer-text">Congratulations! You have chosen to sit on the Iron Throne and rule over the people of Westeros.
         Long may you reign!</p>
         <button type="submit" class="quiz-button" id="play-again">Play Again</button></section>`);
@@ -202,7 +202,7 @@ function dontWantIt() {
     $('.questions-and-answers').on('click', '#dont-want-it', function(event) {
         event.preventDefault();
     $('.questions-and-answers').html(`
-    <a href="https://ibb.co/VHQ2672"><img src="https://i.ibb.co/3fMBKDB/varys.jpg" class="varys-pic" alt="varys" border="0"></a>
+    <a href="https://ibb.co/VHQ2672"><img src="https://i.ibb.co/3fMBKDB/varys.jpg" class="varys-pic" alt="Varys" border="0"></a>
     <section class="answer-section">
         <p class="answer-text">You have chosen to abdicate the throne and live out your days in a different life of your choosing. Your supporters
         work to make sure you remain safe and free from the political reach of the realm.</p>
