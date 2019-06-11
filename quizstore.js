@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: 'What were Daenerys\' three dragons\' names?',
+        question: 'What were Daenerys\' dragons\' names?',
         answers: [
             'Jon, Robb, and Bran',
             'Viserys, Khal Drogo, and Khaleesi',
@@ -9,10 +9,11 @@ const quizData = [
         ],
         correctAnswer: 'Drogon, Rhaegal, and Viserion',
         house: 'Targaryen',
-        
+        answerImg: 'https://i.ibb.co/NSQ4xNT/Targaryen-Shield.png',
+        alt: 'Targaryen Flag'  
     },
      { 
-        question: 'Which Game of Thrones character takes the crown at the end of Season 8?',
+        question: 'Who takes the crown at the end of Season 8?',
         answers: [
             'Jon Snow',
             'Daenerys Targaryen',
@@ -20,7 +21,9 @@ const quizData = [
             'Bran Stark'
         ],
         correctAnswer: 'Bran Stark',
-        house: 'Stark'
+        house: 'Stark',
+        answerImg: 'https://i.ibb.co/bJYwtwR/House-Stark-Main-Shield-PNG.png',
+        alt: 'Stark flag'
     },
     {   
         question: 'Who was blamed for Joffrey\'s death at The Purple Wedding?',
@@ -32,7 +35,11 @@ const quizData = [
 
         ],
         correctAnswer: 'Tyrion Lannister',
-        house: 'Lannister'
+        house: 'Lannister',
+        answerImg:
+        'https://i.ibb.co/JrHFKSk/lannisterright.png',
+        incorrectAnswerImg: 'https://i.ibb.co/Bq7ZWM0/House-Lannister-bannerl.jpg',
+        alt: 'Lannister flag'
     },
     {
         question: 'Who frees Tyrion and saves him from execution for the murder of Joffrey?',
@@ -43,7 +50,10 @@ const quizData = [
             'Sansa Stark'
         ],
         correctAnswer: 'Jaime Lannister',
-        house: 'Lannister'
+        house: 'Lannister',
+        answerImg:
+        'https://i.ibb.co/JrHFKSk/lannisterright.png',
+        alt: 'Lannister flag'
     },
     {  question: 'What do we say to the God of Death?',
        answers: [
@@ -53,18 +63,24 @@ const quizData = [
            'Yesterday'
        ],
        correctAnswer: 'Not Today',
-       house: 'Braavosi'
+       house: 'Stark',
+       answerImg: 'https://i.ibb.co/bJYwtwR/House-Stark-Main-Shield-PNG.png',
+      
+        alt: 'Stark flag'
     },
     {
         question: 'Who was responsible for the death of Jon Arryn?',
         answers: [
             'Varys',
-            'Peter Baelish',
+            'Petyr Baelish',
             'Lysa Arryn',
             'Eddard Stark'
         ],
-        correctAnswer: 'Peter Baelish',
-        house: 'Baelish'
+        correctAnswer: 'Petyr Baelish',
+        house: 'Baelish',
+        answerImg: 'https://i.ibb.co/174cks1/House-Baelish-Main-Shield-PNG.png',
+        
+        alt: 'House Baelish flag'
     },
     {
         question: 'What was Arya\'s sword\'s name?',
@@ -75,7 +91,10 @@ const quizData = [
             'Needle'
         ],
         correctAnswer: 'Needle',
-        house: 'Stark'
+        house: 'Stark',
+        answerImg: 'https://i.ibb.co/bJYwtwR/House-Stark-Main-Shield-PNG.png',
+        
+        alt: 'Stark flag'
     },
     {
         question: 'What happened to Arya\'s direwolf Nymeria?',
@@ -86,7 +105,10 @@ const quizData = [
             'She stayed in Winterfell'
         ],
         correctAnswer: 'She went to go live in the wild',
-        house: 'Stark'
+        house: 'Stark',
+        answerImg: 'https://i.ibb.co/bJYwtwR/House-Stark-Main-Shield-PNG.png',
+        
+        alt: 'Stark flag'
     },
     {
         question: 'Where was Margaery Tyrell from?',
@@ -97,7 +119,10 @@ const quizData = [
             'Casterly Rock'
         ],
         correctAnswer: 'Highgarden',
-        house: 'Tyrell'
+        house: 'Tyrell',
+        answerImg: 'https://i.ibb.co/0rmztyw/House-Tyrell-Main-Shield-PNG.png',
+        
+        alt: 'Tyrell flag'
     },
     {
         question: 'What was the symbol of House Tyrell?',
@@ -108,8 +133,10 @@ const quizData = [
             'A daisy'
         ],
         correctAnswer: 'A rose',
-        house: 'Tyrell'
-
-    }
+        house: 'Tyrell',
+        answerImg: 'https://i.ibb.co/0rmztyw/House-Tyrell-Main-Shield-PNG.png',
         
+        alt: 'Tyrell flag'
+    }       
 ];
+

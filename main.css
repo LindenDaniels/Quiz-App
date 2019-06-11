@@ -1,45 +1,162 @@
 * {
     box-sizing: border-box;
 }
-
-.turn-back {
-    display: block;
-    font-size: 20px;
- 
+body {
+      background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+     url(https://i.ibb.co/bLjWfDv/wallpaper-3647834.jpg);
+    background-size: cover;
+    height: 100%;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: 'Special Elite', cursive;   
 }
-
-
-
+html {
+  height: 100%;  
+}
+.landing-page p {
+  line-height: 2;
+  font-size: 1.5em;
+  padding: 50px; 
+}
+#main-header {
+  padding-top: 70px;
+  font-size: 2em;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;    
+}
+#quiz-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  font-size: 1.5em; 
+}
+.turn-back { 
+  position: relative;
+  top: 10px;
+  text-align: left;
+  font-size: 2.2em;
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+.answer-choices {
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  line-height: 1;
+  font-size: 1.8em; 
+}
+.answer-text {
+  font-size: 2.5em;
+  line-height: 2;
+  padding: 65px;
+}
 .statistics { 
-    position: relative;
-    top: 70px;
-    right: 70px;
-    float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 2.2em;
+  padding-top: 20px;
+  
 }
-
-.question-number, .user-score {
-    font-size: 20px;
+.question-asked {
+  font-size: 2em;
+  line-height: 2;
 }
-
 .questions-answers {
-    padding: 70px;
-    text-align: left;
-    position: relative;
-    left: 500px; 
-    
+  margin: auto;
+  float: left;   
 }
-.main-header {
+.quiz-header {
     text-align: center;
+    font-size: 1.7em;    
 }
-
-
 fieldset {
     padding: 0;
     border: 0;
-    margin: 0;
-    font-size: 20px;
+    margin: 0; 
+  }
+  .quiz-button {
+    font-size: 1.5em;
+    border-radius: 8px;
+    padding: 5px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .radio-input {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15px;
+  }
+  img {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    max-height: 40%;
+  }
+  .varys-pic {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .iron-throne {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  @media screen and (min-width: 1000px) {
+    #main-header {
+      padding-top: 100px;
+    }
+    .quiz-stuff {
+      padding-top: 0px;
+    }
+    body {
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    #quiz-section {
+      display: flex;
+      align-content: center;
+      padding-top: 0px;
+    }
+    .answer-choices {
+      font-size: 1.5em;
+    }
+    .statistics {
+      padding-top: 0px;
+      margin-bottom: 0px;
+    }
+    img {
+      max-width: 20%;
+      max-height: 20%;
+    }
   }
 
-  .raven-button {
-      font-size: 20px;
-  }
+  
