@@ -38,7 +38,8 @@ justify-content: center;
 align-content: center;
 align-items: stretch;
 width: 100%;
-margin: auto;
+margin-left: auto;
+margin-right: auto;
 color: #FFFFFF;    
 }
 #quiz-section {
@@ -150,9 +151,11 @@ img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    position: absolute;
+    
     width: 60%;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   #quiz-section {
     display: flex;
