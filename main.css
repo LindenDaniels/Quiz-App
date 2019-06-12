@@ -11,7 +11,15 @@ body {
   background-size: cover;
   height: 100%;
   image-rendering: -webkit-optimize-contrast;
-  font-family: 'Special Elite', cursive;   
+  font-family: 'Muli', sans-serif;   
+}
+h2 {
+  font-family: 'Special Elite', cursive;
+  font-size: 3em;
+}
+
+button {
+  font-family: 'Muli', sans-serif;
 }
 html {
 height: 100%;  
@@ -23,7 +31,6 @@ padding: 50px;
 }
 #main-header {
 padding-top: 70px;
-font-size: 2em;
 }
 body {
 display: flex;
@@ -31,8 +38,7 @@ justify-content: center;
 align-content: center;
 align-items: stretch;
 width: 100%;
-margin-left: auto;
-margin-right: auto;
+margin: auto;
 color: #FFFFFF;    
 }
 #quiz-section {
@@ -97,8 +103,8 @@ fieldset {
 }
 .quiz-button {
   font-size: 1.5em;
-  border-radius: 8px;
-  padding: 5px;
+  border-radius: 6px;
+  padding: 10px 20px;
   display: block;
   position: relative;
   margin-left: auto;
@@ -145,7 +151,7 @@ img {
     justify-content: flex-start;
     align-items: stretch;
     position: absolute;
-    width: 100%;
+    width: 60%;
     height: 100%;
   }
   #quiz-section {
