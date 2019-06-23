@@ -2,21 +2,11 @@
 	box-sizing: border-box;
 }
 
-body {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ),
-   url(https://i.ibb.co/bLjWfDv/wallpaper-3647834.jpg);
-	background-size: cover;
-	height: 100%;
-	image-rendering: -webkit-optimize-contrast;
-	font-family: 'Muli', sans-serif;
-}
 
 h2 {
 	font-family: 'Special Elite', cursive;
 	font-size: 3em;
+	color: #312F2F;
 }
 
 button {
@@ -45,7 +35,9 @@ body {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	color: #FFFFFF;
+	background-color: #A6D9F7;
+	font-family: 'Muli', sans-serif;
+	color: #BF98A0;
 }
 
 #quiz-section {
