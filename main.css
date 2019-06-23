@@ -10,16 +10,16 @@ body {
    url(https://i.ibb.co/bLjWfDv/wallpaper-3647834.jpg);
 	background-size: cover;
 	height: 100%;
-	image-rendering: -webkit-optimize-contrast;
 	font-family: 'Muli', sans-serif;
+	font-size: 16px;
 }
 
 h2 {
 	font-family: 'Special Elite', cursive;
-	font-size: 3em;
 }
 
 button {
+	font-size: 14px;
 	font-family: 'Muli', sans-serif;
 }
 
@@ -29,7 +29,6 @@ html {
 
 .landing-page p {
 	line-height: 2;
-	font-size: 1.5em;
 	padding: 50px;
 }
 
@@ -49,20 +48,19 @@ body {
 }
 
 #quiz-section {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	margin-left: auto;
-	margin-right: auto;
 	align-items: center;
-	font-size: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;	
 }
 
 .turn-back {
 	position: relative;
 	top: 10px;
 	text-align: left;
-	font-size: 2.2em;
+	font-size: 14px;
 }
 
 a:link {
@@ -84,7 +82,6 @@ a:visited {
 }
 
 .answer-text {
-	font-size: 2.1em;
 	line-height: 2;
 	padding: 65px;
 }
@@ -92,12 +89,11 @@ a:visited {
 .statistics {
 	display: flex;
 	flex-direction: row;
-	font-size: 1.5em;
+	font-size: 14px;
 	padding-top: 20px;
 }
 
 .question-asked {
-	font-size: 2em;
 	line-height: 2;
 }
 
@@ -113,7 +109,6 @@ fieldset {
 }
 
 .quiz-button {
-	font-size: 1.5em;
 	border-radius: 6px;
 	padding: 10px 20px;
 	display: block;
@@ -155,9 +150,7 @@ img {
 }
 
 @media screen and (min-width: 1000px) {
-	h2 {
-		font-size: 3em;
-	}
+	
 
 	#main-header {
 		padding-top: 100px;
@@ -168,20 +161,21 @@ img {
 	}
 
 	body {
+		align-items: stretch;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
-		align-items: stretch;
-		width: 60%;
 		height: 100%;
+		justify-content: flex-start;
 		margin-left: auto;
 		margin-right: auto;
+		width: 60%;	
+		font-size: 18px;
 	}
 
 	#quiz-section {
 		display: flex;
 		align-content: center;
-		padding-top: 0px;
+		padding-top: 0;
 	}
 
 	.answer-choices {
