@@ -15,8 +15,9 @@ function handleHomePageReturn() {
 		console.log('`handleHomePageReturn ran`');
 		let questionNumber = 0;
 		let userScore = 0;
-		$('.questions-and-answers').remove();
-		$('.landing-page').css('display, block');
+		//$('.questions-and-answers').remove();
+		//$('.landing-page').css('display', 'block');
+		location.reload();
 	});
 }
 
